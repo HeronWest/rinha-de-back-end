@@ -1,5 +1,5 @@
 # Use a imagem PHP
-FROM php:7.4-fpm
+FROM php:8-fpm
 
 # Atualize o sistema e instale as dependências
 RUN apt-get update && apt-get install -y \
@@ -27,5 +27,5 @@ EXPOSE 9000
 
 CMD ["php-fpm"]
 
-COPY ./php.ini /usr/local/etc/php/
+#COPY ./php.ini /usr/local/etc/php/
 
