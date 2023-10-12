@@ -18,7 +18,7 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
 # Instale o Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Crie o usuário "heron" e atribua permissões apropriadas
+# Crie o usuário "teste" e atribua permissões apropriadas
 RUN useradd -ms /bin/bash teste
 
 # Defina o diretório de trabalho
@@ -27,14 +27,14 @@ WORKDIR /var/www
 # Crie a pasta "vendor" com permissões adequadas
 RUN mkdir /var/www/vendor && chown -R teste:teste /var/www
 
-# Mude para o usuário "heron"
-USER heron
+# Mude para o usuário "teste"
+USER teste
 
 # Copie os arquivos de configuração e dependências do Composer
 COPY composer.json composer.json
 COPY composer.lock composer.lock
 
-# Instale as dependências do Composer como o usuário "heron"
+# Instale as dependências do Composer como o usuário "teste"
 RUN composer install --no-scripts
 
 # Copie o restante dos arquivos do projeto
