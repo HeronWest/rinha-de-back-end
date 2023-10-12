@@ -3,11 +3,7 @@
 </h1>
 <h2>ATENÇÃO</h2>
 Pode haver diferença no arquivo dockerfile por conta de S.O e permissões do usuário.<br>
-
 Para rodar o projeto é necessário ter docker/docker-compose instalado e executar alguns comandos.
-
-<h2>ATENÇÃO</h2>
-<br>Podem ser necessárias alterações no dockerfile por diferenças de S.O ou do caminho do arquivo php.ini.<br>
 
 <h3> Passo 1 </h3><br> Rode "docker-compose up -d", caso necessário utilize o sudo para permissões.
 
