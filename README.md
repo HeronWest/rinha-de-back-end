@@ -1,17 +1,17 @@
 <h1> 
     Teste de Laravel com o tema da @RinhaDeBackEnd
 </h1>
+<h2>ATENÇÃO</h2>
+Pode haver diferença no arquivo dockerfile por conta de S.O e permissões do usuário.<br>
 
 Para rodar o projeto é necessário ter docker/docker-compose instalado e executar alguns comandos.
 
 <h2>ATENÇÃO</h2>
 <br>Podem ser necessárias alterações no dockerfile por diferenças de S.O ou do caminho do arquivo php.ini.<br>
 
-<h3> Passo 1 </h3><br> Após fazer o merge entre na pasta root 'example-app' e rode "docker-compose up -d", caso necessário utilize o sudo para permissões.
+<h3> Passo 1 </h3><br> Rode "docker-compose up -d", caso necessário utilize o sudo para permissões.
 
-<h3> Passo 2 </h3><br> Rode "docker-compose exec app bash" para entra no container do Laravel. 
-
-<h3> Passo 3 </h3><br> Rode "cd /var/www" para conseguir executar os comandos do artisan no container.
+<h3> Passo 2 </h3><br> Rode "docker-compose exec app composer install" e depois "docker-compose exec app bash" para entrar no container do Laravel. 
 
 <h3> Passo 4 </h3><br> Rode "php artisan migrate" para criar as tabelas no banco de dados postgres que está no outro container e rode "php artisan serve --host=0.0.0.0 --port=8000" para executar o servidor de desenvolvimento do Laravel.
 
